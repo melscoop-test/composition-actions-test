@@ -1,0 +1,12 @@
+name: Publish Docker Build
+on: workflow_dispatch
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: melscoop-test/publish-docker@v1
+        with:
+          registry_username: ${{secrets.DOCKER_USERNAME}}
+          registry_password: ${{secrets.DOCKER_PASSWORD}}
