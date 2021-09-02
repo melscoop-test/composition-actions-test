@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Login to Docker and publish
-        uses: melscoop-test/publish-docker@v1
+        uses: melscoop-test/publish-docker@latest
         with:
           registry_username: ${{secrets.DOCKER_USERNAME}}
           registry_password: ${{secrets.DOCKER_PASSWORD}}
